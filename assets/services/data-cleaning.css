@@ -1,0 +1,9 @@
+/* =========================================================
+   DATA CLEANING & QUALITY SERVICE PAGE
+
+   This page intentionally reuses the finalized layout and responsive
+   rules from the Data Collection & Mining service page so all service
+   pages remain visually consistent.
+   ========================================================= */
+
+@import url("data-collection.css");

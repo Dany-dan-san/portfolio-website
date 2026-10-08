@@ -1,0 +1,778 @@
+/* =========================================================
+   SERVICES OVERVIEW PAGE
+   Page-specific rules only.
+   The shared landing-page stylesheet remains the visual base.
+   ========================================================= */
+
+.nav-current {
+  color: var(--ink) !important;
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.services-overview-hero {
+  grid-template-columns: minmax(0, 900px);
+  min-height: 700px;
+  align-content: start;
+}
+
+.services-overview-hero-inner {
+  width: 100%;
+  max-width: 900px;
+}
+
+.services-overview-hero h1 {
+  line-height: 1.04;
+  padding-bottom: 0.08em;
+}
+
+.services-overview-hero .gradient-text {
+  padding-bottom: 0.2em;
+}
+
+.services-overview-copy {
+  max-width: 760px;
+  color: var(--ink);
+  font-size: clamp(1.1rem, 1.2vw, 1.4rem);
+}
+
+.services-overview-actions {
+  max-width: 470px;
+}
+
+.services-overview-tags {
+  max-width: 720px;
+  justify-content: flex-start;
+}
+
+.services-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  margin-bottom: 22px;
+  padding: 7px 11px;
+
+  border: 1px solid rgba(95, 41, 199, 0.12);
+  border-radius: 999px;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(14, 210, 218, 0.10),
+      rgba(95, 41, 199, 0.10)
+    );
+
+  color: var(--violet);
+
+  font-family: "Manrope", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
+
+/* =========================================================
+   INTRO
+   ========================================================= */
+
+.services-intro {
+  padding-top: var(--section-gap);
+}
+
+.services-intro-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 100px;
+  align-items: start;
+}
+
+.services-intro-grid h2 {
+  margin-bottom: 0;
+  font-size: clamp(2.3rem, 4vw, 4.4rem);
+  line-height: 1.08;
+}
+
+.services-intro-grid > p {
+  max-width: 520px;
+  margin: 0;
+  padding-top: 7px;
+
+  color: var(--muted);
+
+  font-size: clamp(1.1rem, 1.2vw, 1.4rem);
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   SERVICE DIRECTORY
+   ========================================================= */
+
+.service-directory {
+  margin-top: var(--section-gap);
+  padding-top: var(--section-split-gap);
+  border-top: 1px solid var(--line);
+}
+
+.service-directory-header {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 100px;
+  align-items: end;
+  margin-bottom: 44px;
+}
+
+.service-directory-header h2 {
+  max-width: 850px;
+  margin-bottom: 0;
+
+  font-size: clamp(2.3rem, 4vw, 4.4rem);
+  line-height: 1.08;
+}
+
+.service-directory-header > p {
+  max-width: 520px;
+  margin: 0;
+
+  color: var(--muted);
+
+  font-size: clamp(1.1rem, 1.2vw, 1.4rem);
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   SERVICE LIST
+   ========================================================= */
+
+.service-directory-list {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid var(--line);
+}
+
+.directory-service {
+  position: relative;
+
+  display: grid;
+  grid-template-columns: 52px minmax(0, 1fr) auto;
+  gap: 30px;
+  align-items: center;
+
+  min-height: 250px;
+
+  /* Shared right inset keeps all desktop CTAs away from
+     the container edge while preserving exact alignment. */
+  padding: 34px 24px 34px 0;
+
+  border-bottom: 1px solid var(--line);
+
+  transition:
+    background 0.22s ease,
+    transform 0.22s ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .directory-service:hover {
+    background:
+      linear-gradient(
+        90deg,
+        rgba(14, 210, 218, 0.035),
+        rgba(95, 41, 199, 0.035)
+      );
+  }
+}
+
+
+/* =========================================================
+   NUMBER
+   ========================================================= */
+
+.directory-service-number {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  align-self: start;
+  margin-top: 2px;
+
+  border: 1px solid rgba(17, 20, 27, 0.12);
+  border-radius: 50%;
+
+  background: #fff;
+
+  box-shadow:
+    0 4px 12px rgba(17, 20, 27, 0.05);
+
+  color: var(--ink);
+
+  font-family: "Manrope", sans-serif;
+  font-size: 0.7rem;
+  font-weight: 800;
+}
+
+
+/* =========================================================
+   CONTENT
+   ========================================================= */
+
+.directory-service-main {
+  min-width: 0;
+}
+
+.directory-service-label {
+  margin-bottom: 12px;
+
+  color: var(--violet);
+
+  font-family: "Manrope", sans-serif;
+  font-size: 0.76rem;
+  font-weight: 800;
+  line-height: 1.3;
+  letter-spacing: 0.11em;
+}
+
+.directory-service-main h3 {
+  max-width: 720px;
+  margin-bottom: 12px;
+
+  font-size: clamp(1.8rem, 2.8vw, 3rem);
+  line-height: 1.08;
+}
+
+.directory-service-main > p {
+  max-width: 770px;
+  margin-bottom: 0;
+
+  /* Keeps long directory descriptions from stretching too far
+     toward the CTA column on desktop. */
+  padding-right: 48px;
+
+  color: var(--muted);
+
+  font-size: clamp(1.1rem, 1.2vw, 1.4rem);
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   TAGS
+   ========================================================= */
+
+.directory-service-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-top: 18px;
+}
+
+.directory-service-tags span {
+  padding: 6px 9px;
+
+  border: 1px solid rgba(17, 20, 27, 0.09);
+  border-radius: 8px;
+
+  background: rgba(255, 255, 255, 0.7);
+
+  color: #5c616c;
+
+  font-size: 0.9rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+
+/* =========================================================
+   CTA
+   ========================================================= */
+
+.directory-service-action {
+  align-self: center;
+
+  width: 190px;
+
+  justify-self: end;
+}
+
+.directory-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 14px;
+
+  width: 190px;
+  min-height: 48px;
+
+  padding: 0 18px;
+
+  border: 1px solid rgba(17, 20, 27, 0.12);
+  border-radius: 999px;
+
+  background: #fff;
+
+  box-shadow:
+    0 7px 20px rgba(17, 20, 27, 0.06);
+
+  color: var(--ink);
+
+  font-size: 0.86rem;
+  font-weight: 800;
+
+  white-space: nowrap;
+
+  transition:
+    color 0.2s ease,
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.directory-cta span:last-child {
+  font-size: 1.05rem;
+}
+
+
+/* =========================================================
+   FEATURED ENTITY RESOLUTION
+   ========================================================= */
+
+.directory-service-featured {
+  margin: 10px 0;
+
+  /* Match the 24px right inset used by the other service rows
+     so the featured CTA aligns with every other CTA. */
+  padding: 38px 24px 38px 26px;
+
+  border: 1px solid rgba(95, 41, 199, 0.18);
+  border-radius: var(--radius-md);
+
+  background:
+    radial-gradient(
+      circle at 92% 80%,
+      rgba(95, 41, 199, 0.08),
+      transparent 34%
+    ),
+    radial-gradient(
+      circle at 8% 18%,
+      rgba(14, 210, 218, 0.08),
+      transparent 32%
+    ),
+    linear-gradient(
+      135deg,
+      rgba(14, 210, 218, 0.03),
+      rgba(95, 41, 199, 0.045)
+    ),
+    #fff;
+
+  box-shadow:
+    0 10px 30px rgba(38, 31, 71, 0.07);
+}
+
+.directory-service-featured + .directory-service {
+  border-top: 1px solid var(--line);
+}
+
+.directory-featured-topline {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.directory-featured-topline .directory-service-label {
+  margin-bottom: 0;
+}
+
+/* The Entity Resolution description is intentionally narrower
+   than the other rows so it reads as a compact featured block
+   and leaves a clearer visual channel before the CTA. */
+.directory-service-featured .directory-service-main > p {
+  max-width: 680px;
+  padding-right: 72px;
+}
+
+.directory-specialist-badge {
+  padding: 5px 8px;
+  border-radius: 999px;
+
+  background: #f0ebfb;
+  color: var(--violet);
+
+  font-size: 0.6rem;
+  font-weight: 800;
+  letter-spacing: 0.09em;
+}
+
+.directory-cta-featured {
+  border-color: rgba(95, 41, 199, 0.18);
+  background: var(--violet);
+  color: #fff;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .directory-cta:hover {
+    transform: translateY(-2px);
+    border-color: var(--ink);
+    background: var(--ink);
+    color: #fff;
+    box-shadow: 0 12px 26px rgba(17, 20, 27, 0.14);
+  }
+
+  .directory-cta-featured:hover {
+    border-color: var(--violet);
+    background: #4d20a8;
+  }
+}
+
+
+/* =========================================================
+   WORKFLOW NOTE
+   ========================================================= */
+
+.service-workflow-note {
+  margin-top: var(--section-gap);
+  padding-top: var(--section-split-gap);
+  border-top: 1px solid var(--line);
+}
+
+.service-workflow-note-inner {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 90px;
+  align-items: start;
+}
+
+.service-workflow-note h2 {
+  max-width: 720px;
+  margin-bottom: 0;
+
+  font-size: clamp(2.3rem, 4vw, 4.4rem);
+  line-height: 1.08;
+}
+
+.service-workflow-note p {
+  max-width: 560px;
+  margin: 0;
+  padding-top: 7px;
+
+  color: var(--muted);
+
+  font-size: clamp(1.1rem, 1.2vw, 1.4rem);
+  line-height: 1.6;
+}
+
+.service-workflow-note + .contact {
+  margin-top: var(--section-gap);
+}
+
+
+/* =========================================================
+   DIRECTORY ALIGNMENT — DESKTOP
+   ========================================================= */
+
+@media (min-width: 981px) {
+
+  .directory-service-action {
+    width: 190px;
+    justify-self: end;
+  }
+
+  .directory-cta {
+    width: 190px;
+    justify-content: space-between;
+  }
+
+  .directory-service-featured .directory-service-action {
+    transform: none;
+  }
+
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 980px) {
+
+  .services-overview-hero {
+    grid-template-columns: minmax(0, 1fr);
+    min-height: 640px;
+  }
+
+  .services-overview-hero-inner {
+    max-width: 760px;
+  }
+
+  .services-intro-grid,
+  .service-directory-header,
+  .service-workflow-note-inner {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 32px;
+  }
+
+  .directory-service {
+    grid-template-columns: 48px minmax(0, 1fr);
+    gap: 20px;
+    align-items: start;
+  }
+
+  .directory-service-action {
+    grid-column: 2;
+    justify-self: start;
+    margin-top: 6px;
+  }
+
+  .directory-service-featured {
+    grid-template-columns: 48px minmax(0, 1fr);
+    padding: 34px 24px;
+  }
+
+  .directory-service-main > p {
+    padding-right: 24px;
+  }
+
+  .directory-service-featured .directory-service-main > p {
+    max-width: 680px;
+    padding-right: 32px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 680px) {
+
+  .services-overview-hero {
+    grid-template-columns: minmax(0, 1fr);
+    min-height: auto;
+    gap: 0;
+
+    padding:
+      112px
+      18px
+      56px;
+  }
+
+  .services-overview-hero-inner,
+  .services-overview-hero h1,
+  .services-overview-copy {
+    max-width: none;
+  }
+
+  .services-overview-hero h1 {
+    line-height: 1.04;
+    padding-bottom: 0.1em;
+  }
+
+  .services-overview-actions {
+    max-width: none;
+  }
+
+  .services-overview-tags {
+    max-width: none;
+    justify-content: center;
+  }
+
+  .services-eyebrow {
+    margin-left: 10px;
+    margin-bottom: 16px;
+    font-size: 0.9rem;
+  }
+
+  .services-intro {
+    padding-top: var(--section-gap);
+  }
+
+  .services-intro-grid {
+    gap: 24px;
+  }
+
+  .services-intro-grid h2,
+  .service-directory-header h2,
+  .service-workflow-note h2 {
+    font-size: clamp(2.05rem, 9.5vw, 2.65rem);
+    line-height: 1.06;
+  }
+
+  .services-intro-grid > p,
+  .service-directory-header > p,
+  .service-workflow-note p {
+    max-width: none;
+    padding-top: 0;
+
+    font-size: clamp(1.1rem, 1.2vw, 1.4rem);
+    line-height: 1.62;
+  }
+
+  .service-directory {
+    margin-top: var(--section-gap);
+    padding-top: var(--section-split-gap);
+  }
+
+  .service-directory-header {
+    gap: 24px;
+    margin-bottom: 30px;
+  }
+
+  .directory-service {
+    grid-template-columns: 38px minmax(0, 1fr);
+    column-gap: 16px;
+    row-gap: 0;
+
+    min-height: 0;
+
+    padding:
+      30px
+      12px
+      30px
+      0;
+  }
+
+  .directory-service-number {
+    width: 38px;
+    height: 38px;
+    font-size: 0.64rem;
+  }
+
+  .directory-service-label {
+    display: flex;
+    align-items: center;
+
+    min-height: 38px;
+
+    margin-bottom: 10px;
+    font-size: 0.76rem;
+  }
+
+  .directory-service-main h3 {
+    max-width: none;
+    margin-bottom: 10px;
+
+    font-size: 1.55rem;
+    line-height: 1.12;
+  }
+
+  .directory-service-main > p {
+    max-width: none;
+
+    /* Small mobile inset for easier reading without making
+       the text column feel cramped. */
+    padding-right: 6px;
+
+    font-size: clamp(1.1rem, 1.2vw, 1.4rem);
+    line-height: 1.55;
+  }
+
+  .directory-service-tags {
+    margin-top: 16px;
+  }
+
+  .directory-service-action {
+    grid-column: 2;
+    width: 180px;
+    justify-self: start;
+    margin-top: 20px;
+  }
+
+  .directory-cta {
+    width: 180px;
+    justify-content: space-between;
+    min-height: 46px;
+    padding: 0 16px;
+  }
+
+  .directory-service-featured {
+    margin:
+      10px
+      -12px;
+
+    padding:
+      28px
+      12px;
+
+    border-radius: 18px;
+  }
+
+  .directory-featured-topline {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 10px;
+  }
+
+  .directory-featured-topline .directory-service-label {
+    min-height: 0;
+  }
+
+  .directory-service-featured .directory-service-main {
+    padding-right: 0;
+  }
+
+  .directory-service-featured .directory-service-main > p {
+    max-width: none;
+    padding-right: 6px;
+  }
+
+  .directory-service-featured .directory-service-action,
+  .directory-service-featured .directory-cta {
+    width: 180px;
+  }
+
+  .service-workflow-note {
+    margin-top: var(--section-gap);
+    padding-top: var(--section-split-gap);
+  }
+
+  .service-workflow-note-inner {
+    gap: 24px;
+  }
+
+  .service-workflow-note + .contact {
+    margin-top: 22px;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 420px) {
+
+  .services-overview-hero {
+    padding-right: 14px;
+    padding-left: 14px;
+  }
+
+  .directory-service {
+    grid-template-columns: 36px minmax(0, 1fr);
+    column-gap: 14px;
+    padding: 28px 10px 28px 0;
+  }
+
+  .directory-service-number {
+    width: 36px;
+    height: 36px;
+    font-size: 0.8rem;
+  }
+
+  .directory-service-label {
+    min-height: 36px;
+    font-size: 1rem;
+  }
+
+  .directory-service-main h3 {
+    font-size: 1.45rem;
+  }
+
+}

@@ -1,0 +1,1672 @@
+/* =========================================================
+   ENTITY RESOLUTION & MATCHING SERVICE PAGE
+
+   Page-specific overrides only.
+   The shared landing-page stylesheet remains the visual base.
+   ========================================================= */
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.service-hero {
+  grid-template-columns: minmax(0, 860px);
+  min-height: 700px;
+  align-content: start;
+}
+
+.service-hero-inner {
+  width: 100%;
+  max-width: 860px;
+}
+
+.service-hero h1 {
+  line-height: 1.04;
+  padding-bottom: 0.08em;
+}
+
+/* Prevent descenders in the gradient headline from clipping. */
+.service-hero .gradient-text {
+  padding-bottom: 0.2em;
+}
+
+.service-hero-copy {
+  max-width: 720px;
+  font-size: clamp(1.1rem, 1.2vw, 1.4rem);
+  color:black;
+}
+
+.service-hero-actions {
+  max-width: 260px;
+}
+
+/* Service-specific tags remain left-aligned on desktop. */
+.service-capability-strip {
+  max-width: 780px;
+  justify-content: flex-start;
+}
+
+
+/* =========================================================
+   THE PROBLEM
+   ========================================================= */
+
+.service-problem {
+  padding-top: var(--section-gap);
+}
+
+.service-problem-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 100px;
+  align-items: start;
+}
+
+.service-problem h2 {
+  margin-bottom: 0;
+
+  font-size: clamp(2.3rem, 4vw, 4.4rem);
+  line-height: 1.08;
+}
+
+.service-problem-grid > p {
+  max-width: 520px;
+
+  margin: 0;
+  padding-top: 7px;
+
+  color: var(--muted);
+
+  font-size: clamp(1.1rem, 1.2vw, 1.4rem);
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   WHAT I CAN RESOLVE
+   ========================================================= */
+
+.collect-sources {
+  margin-top: var(--section-gap);
+  padding-top: var(--section-split-gap);
+
+  border-top: 1px solid var(--line);
+}
+
+.collect-sources-title {
+  max-width: 850px;
+
+  margin-bottom: 40px;
+
+  font-size: clamp(2.3rem, 4vw, 4.4rem);
+  line-height: 1.08;
+}
+
+
+/* =========================================================
+   RESOLUTION CARDS
+   ========================================================= */
+
+.collect-sources-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 18px;
+}
+
+.collect-source-card {
+  min-width: 0;
+  min-height: 230px;
+
+  padding: 30px;
+
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+
+  background: #fff;
+
+  box-shadow:
+    0 5px 14px rgba(17, 20, 27, 0.06);
+}
+
+.collect-source-label {
+  margin-bottom: 36px;
+
+  font-family: "Manrope", sans-serif;
+
+  font-size: 0.72rem;
+  font-weight: 800;
+
+  letter-spacing: 0.13em;
+
+  color: var(--violet);
+}
+
+.collect-source-card h3 {
+  margin-bottom: 12px;
+
+  font-size: 1.45rem;
+  line-height: 1.12;
+}
+
+.collect-source-card p {
+  max-width: 500px;
+
+  margin-bottom: 0;
+
+  color: var(--muted);
+
+  font-size: clamp(1.1rem,1.2vw,1.4rem);
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   HOW I WORK
+   ========================================================= */
+
+.service-process {
+  margin-top: var(--section-gap);
+  padding-top: var(--section-split-gap);
+
+  border-top: 1px solid var(--line);
+}
+
+.service-process-title {
+  max-width: 900px;
+
+  margin-bottom: 52px;
+
+  font-size: clamp(2.3rem, 4vw, 4.4rem);
+  line-height: 1.08;
+}
+
+
+/* =========================================================
+   PROCESS GRID — DESKTOP
+   ========================================================= */
+
+.service-process-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  gap: 24px;
+}
+
+
+/* =========================================================
+   PROCESS STEP — DESKTOP
+   ========================================================= */
+
+.process-step {
+  position: relative;
+  min-width: 0;
+}
+
+
+/* Step number */
+
+.process-step-number {
+  position: relative;
+  z-index: 2;
+
+  display: grid;
+
+  width: 42px;
+  height: 42px;
+
+  place-items: center;
+
+  border: 1px solid rgba(17, 20, 27, 0.12);
+  border-radius: 50%;
+
+  background: #fff;
+
+  font-family: "Manrope", sans-serif;
+
+  font-size: 0.7rem;
+  font-weight: 800;
+
+  color: var(--ink);
+
+  box-shadow:
+    0 4px 12px rgba(17, 20, 27, 0.05);
+}
+
+
+/* Horizontal connector between steps */
+
+.process-step-line {
+  position: absolute;
+  z-index: 1;
+
+  top: 20px;
+  left: 42px;
+
+  width: calc(100% + 24px - 42px);
+  height: 1px;
+
+  background: var(--line);
+}
+
+.process-step:last-child .process-step-line {
+  display: none;
+}
+
+
+/* =========================================================
+   PROCESS CONTENT — DESKTOP
+   ========================================================= */
+
+.process-step-content {
+  padding-top: 28px;
+}
+
+
+/* This is the actual process stage.
+   Give it stronger visual weight than before. */
+
+.process-step-label {
+  margin-bottom: 15px;
+
+  font-family: "Manrope", sans-serif;
+
+  font-size: 0.78rem;
+  font-weight: 800;
+
+  line-height: 1.3;
+  letter-spacing: 0.1em;
+
+  color: var(--violet);
+}
+
+
+/* Supporting proposition.
+   Deliberately a little less dominant than before. */
+
+.process-step-content h3 {
+  max-width: 250px;
+
+  margin-bottom: 10px;
+
+  font-size: 1.25rem;
+  font-weight: 700;
+
+  line-height: 1.18;
+  letter-spacing: -0.03em;
+}
+
+.process-step-content p {
+  max-width: 260px;
+
+  margin-bottom: 0;
+
+  color: var(--muted);
+
+  font-size: 0.94rem;
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   FUTURE DRAFT AREA
+   ========================================================= */
+
+.service-page-draft {
+  min-height: 420px;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.service-footer {
+  margin-top: 0;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 980px) {
+
+  /* =======================================================
+     HERO
+     ======================================================= */
+
+  .service-hero {
+    grid-template-columns: minmax(0, 1fr);
+    min-height: 640px;
+  }
+
+  .service-hero-inner {
+    max-width: 760px;
+  }
+
+
+  /* =======================================================
+     THE PROBLEM
+     ======================================================= */
+
+  .service-problem-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+
+  /* =======================================================
+     WHAT I CAN RESOLVE
+     ======================================================= */
+
+  .collect-sources-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+
+  /* =======================================================
+     HOW I WORK — TABLET
+
+     Switch from four columns into one connected vertical
+     process. The number and process label now share the
+     same row and are precisely aligned.
+     ======================================================= */
+
+  .service-process-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+
+  /* Two-column internal layout:
+     number | process content
+  */
+
+  .process-step {
+    position: relative;
+
+    display: grid;
+    grid-template-columns: 42px minmax(0, 1fr);
+
+    column-gap: 20px;
+
+    min-height: 0;
+
+    padding: 0 0 40px;
+  }
+
+  .process-step:last-child {
+    padding-bottom: 0;
+  }
+
+
+  /* Number */
+
+  .process-step-number {
+    position: relative;
+
+    top: auto;
+    left: auto;
+
+    grid-column: 1;
+    grid-row: 1;
+
+    width: 42px;
+    height: 42px;
+  }
+
+
+  /* Vertical connector */
+
+  .process-step-line {
+    position: absolute;
+    z-index: 1;
+
+    top: 42px;
+    bottom: 0;
+    left: 20px;
+
+    width: 1px;
+    height: auto;
+
+    background: var(--line);
+  }
+
+  .process-step:last-child .process-step-line {
+    display: none;
+  }
+
+
+  /* Content occupies second column */
+
+  .process-step-content {
+    grid-column: 2;
+    grid-row: 1;
+
+    min-width: 0;
+
+    padding-top: 0;
+  }
+
+
+  /* Align the actual process label with the circle */
+
+  .process-step-label {
+    display: flex;
+    align-items: center;
+
+    min-height: 42px;
+
+    margin-bottom: 12px;
+
+    font-size: 0.78rem;
+  }
+
+
+  /* Supporting headline */
+
+  .process-step-content h3 {
+    max-width: 540px;
+
+    margin-bottom: 8px;
+
+    font-size: 1.25rem;
+  }
+
+
+  /* Supporting description */
+
+  .process-step-content p {
+    max-width: 620px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 680px) {
+
+  /* =======================================================
+     HERO
+     ======================================================= */
+
+  .service-hero {
+    grid-template-columns: minmax(0, 1fr);
+
+    min-height: auto;
+
+    gap: 0;
+
+    padding:
+      112px
+      18px
+      56px;
+  }
+
+  .service-hero-inner,
+  .service-hero h1,
+  .service-hero-copy {
+    max-width: none;
+  }
+
+  .service-hero h1 {
+    line-height: 1.04;
+    padding-bottom: 0.1em;
+  }
+
+  .service-hero-actions {
+    max-width: none;
+  }
+
+  .service-capability-strip {
+    max-width: none;
+
+    justify-content: center;
+  }
+
+
+  /* =======================================================
+     THE PROBLEM
+     ======================================================= */
+
+  .service-problem {
+    padding-top: var(--section-gap);
+  }
+
+  .service-problem-grid {
+    grid-template-columns: minmax(0, 1fr);
+
+    gap: 24px;
+  }
+
+  .service-problem h2 {
+    font-size: clamp(2.05rem, 9.5vw, 2.65rem);
+    line-height: 1.06;
+  }
+
+  .service-problem-grid > p {
+    max-width: none;
+
+    padding-top: 0;
+
+    font-size: clamp(1.1rem, 1.2vw, 1.4rem);
+    line-height: 1.62;
+  }
+
+
+  /* =======================================================
+     WHAT I CAN RESOLVE
+     ======================================================= */
+
+  .collect-sources {
+    margin-top: var(--section-gap);
+
+    padding-top: var(--section-split-gap);
+  }
+
+  .collect-sources-title {
+    max-width: none;
+
+    margin-bottom: 26px;
+
+    font-size: clamp(2.05rem, 9.5vw, 2.65rem);
+    line-height: 1.06;
+  }
+
+
+  /* =======================================================
+     MOBILE RESOLUTION CARDS
+     ======================================================= */
+
+  .collect-sources-grid {
+    grid-template-columns: minmax(0, 1fr);
+
+    gap: 14px;
+  }
+
+  .collect-source-card {
+    min-height: 0;
+
+    padding: 22px 24px;
+
+    border-radius: 18px;
+  }
+
+  .collect-source-label {
+    margin-bottom: 12px;
+
+    font-size: 0.8rem;
+  }
+
+  .collect-source-card h3 {
+    margin-bottom: 8px;
+
+    font-size: 1.2rem;
+    line-height: 1.15;
+  }
+
+  .collect-source-card p {
+    max-width: none;
+
+    margin-bottom: 0;
+
+    font-size: clamp(1.1rem,1.2vw,1.4rem);
+    line-height: 1.55;
+  }
+
+
+  /* =======================================================
+     HOW I WORK — MOBILE
+     ======================================================= */
+
+  .service-process {
+    margin-top: var(--section-gap);
+
+    padding-top: var(--section-split-gap);
+  }
+
+  .service-process-title {
+    max-width: none;
+
+    margin-bottom: 36px;
+
+    font-size: clamp(2.05rem, 9.5vw, 2.65rem);
+    line-height: 1.06;
+  }
+
+
+  /* =======================================================
+     MOBILE VERTICAL PROCESS
+
+     The number and process label now live on the same
+     horizontal row.
+     ======================================================= */
+
+  .service-process-grid {
+    display: flex;
+    flex-direction: column;
+
+    gap: 0;
+  }
+
+  .process-step {
+    position: relative;
+
+    display: grid;
+
+    grid-template-columns:
+      38px
+      minmax(0, 1fr);
+
+    column-gap: 16px;
+
+    min-height: 0;
+
+    padding: 0 0 38px;
+  }
+
+  .process-step:last-child {
+    padding-bottom: 0;
+  }
+
+
+  /* =======================================================
+     MOBILE STEP NUMBER
+     ======================================================= */
+
+  .process-step-number {
+    position: relative;
+
+    top: auto;
+    left: auto;
+
+    z-index: 2;
+
+    grid-column: 1;
+    grid-row: 1;
+
+    display: grid;
+
+    width: 38px;
+    height: 38px;
+
+    place-items: center;
+
+    font-size: 0.64rem;
+  }
+
+
+  /* =======================================================
+     MOBILE VERTICAL CONNECTOR
+     ======================================================= */
+
+  .process-step-line {
+    position: absolute;
+    z-index: 1;
+
+    top: 38px;
+    bottom: 0;
+    left: 18px;
+
+    width: 1px;
+    height: auto;
+
+    background: var(--line);
+  }
+
+  .process-step:last-child .process-step-line {
+    display: none;
+  }
+
+
+  /* =======================================================
+     MOBILE PROCESS CONTENT
+     ======================================================= */
+
+  .process-step-content {
+    grid-column: 2;
+    grid-row: 1;
+
+    min-width: 0;
+
+    padding: 0;
+  }
+
+
+  /* Main process step:
+     aligned vertically with the circle.
+  */
+
+  .process-step-label {
+    display: flex;
+    align-items: center;
+
+    min-height: 38px;
+
+    margin-bottom: 12px;
+
+    font-size: 0.76rem;
+    font-weight: 800;
+
+    line-height: 1.2;
+    letter-spacing: 0.1em;
+  }
+
+
+  /* Secondary explanatory hook */
+
+  .process-step-content h3 {
+    max-width: none;
+
+    margin-bottom: 8px;
+
+    font-size: 1.18rem;
+    font-weight: 700;
+
+    line-height: 1.2;
+    letter-spacing: -0.025em;
+  }
+
+
+  /* Supporting paragraph */
+
+  .process-step-content p {
+    max-width: none;
+
+    margin-bottom: 0;
+
+    font-size: clamp(1.1rem,1.2vw,1.4rem);
+    line-height: 1.55;
+  }
+
+
+  /* =======================================================
+     FUTURE DRAFT AREA
+     ======================================================= */
+
+  .service-page-draft {
+    min-height: 260px;
+  }
+
+    .typical-projects {
+    padding-bottom: 22px;
+  }
+
+  .contact {
+    margin-top: 22px;
+  }
+
+  .service-footer {
+    margin-top: 22px;
+    align-items: center;
+  }
+
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 420px) {
+
+  /* =======================================================
+     HERO
+     ======================================================= */
+
+  .service-hero {
+    padding-right: 14px;
+    padding-left: 14px;
+  }
+
+
+  /* =======================================================
+     RESOLUTION CARDS
+     ======================================================= */
+
+  .collect-source-card {
+    padding: 21px 22px;
+  }
+
+
+  /* =======================================================
+     HOW I WORK
+     ======================================================= */
+
+  .process-step {
+    grid-template-columns:
+      36px
+      minmax(0, 1fr);
+
+    column-gap: 14px;
+
+    padding-bottom: 32px;
+  }
+
+  .process-step:last-child {
+    padding-bottom: 0;
+  }
+
+  .process-step-number {
+    width: 36px;
+    height: 36px;
+
+    font-size: 0.8rem;
+  }
+
+  .process-step-line {
+    top: 36px;
+    left: 17px;
+  }
+
+  .process-step-label {
+    min-height: 36px;
+
+    margin-bottom: 11px;
+
+    font-size: 1rem;
+  }
+
+  .process-step-content h3 {
+    font-size: 1.2rem;
+  }
+
+  .process-step-content p {
+    font-size: clamp(1.1rem,1.2vw,1.4rem,1.6);
+  }
+}
+
+/* =======================================================
+   TYPICAL PROJECTS
+   ======================================================= */
+
+.typical-projects {
+  margin-top: var(--section-gap);
+  padding-top: var(--section-split-gap);
+
+  border-top: 1px solid var(--line);
+}
+
+.typical-projects-title {
+  max-width: none;
+
+  margin-bottom: 36px;
+
+  font-size: clamp(2.05rem, 9.5vw, 2.65rem);
+  line-height: 1.06;
+}
+
+
+/* =======================================================
+   PROJECT LIST
+   ======================================================= */
+
+.typical-projects-list {
+  display: flex;
+  flex-direction: column;
+
+  gap: 0;
+}
+
+
+/* =======================================================
+   INDIVIDUAL PROJECT
+   ======================================================= */
+
+.typical-project {
+  display: grid;
+
+  grid-template-columns:
+    36px
+    minmax(0, 1fr);
+
+  column-gap: 14px;
+
+  padding-bottom: 32px;
+}
+
+.typical-project:last-child {
+  padding-bottom: 0;
+}
+
+
+/* =======================================================
+   PROJECT NUMBER
+   ======================================================= */
+
+.typical-project-number {
+  display: grid;
+
+  width: 36px;
+  height: 36px;
+
+  place-items: center;
+
+  border: 1px solid rgba(17, 20, 27, 0.12);
+  border-radius: 50%;
+
+  background: #fff;
+
+  font-family: "Manrope", sans-serif;
+
+  font-size: 0.8rem;
+  font-weight: 800;
+
+  color: var(--ink);
+
+  box-shadow:
+    0 4px 12px rgba(17, 20, 27, 0.05);
+}
+
+
+/* =======================================================
+   PROJECT CONTENT
+   ======================================================= */
+
+.typical-project-content {
+  min-width: 0;
+}
+
+.typical-project-content p {
+  max-width: none;
+
+  margin-bottom: 0;
+  padding-right: 10px;
+
+  color: var(--muted);
+
+  font-size: clamp(1.1rem, 1.2vw, 1.4rem);
+  line-height: 1.6;
+}
+
+/* Main project category.
+   Aligned vertically with the numbered circle.
+*/
+
+.typical-project-label {
+  display: flex;
+  align-items: center;
+
+  min-height: 36px;
+
+  margin-bottom: 11px;
+
+  font-family: "Manrope", sans-serif;
+
+  /* Mobile/tablet default */
+  font-size: 1rem;
+  font-weight: 800;
+
+  line-height: 1.2;
+  letter-spacing: 0.08em;
+
+  color: var(--violet);
+}
+
+
+/* Desktop only */
+@media (min-width: 981px) {
+
+  .typical-project-label {
+    font-size: 1.4rem;
+  }
+
+}
+
+
+/* Supporting project proposition */
+
+.typical-project-content h3 {
+  max-width: none;
+
+  margin-bottom: 8px;
+
+  font-size: 1.2rem;
+  font-weight: 700;
+
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+}
+
+
+
+/* =======================================================
+   PROJECT DELIVERABLE TAGS
+   ======================================================= */
+
+.typical-project-tags {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 7px;
+
+  margin-top: 16px;
+}
+
+.typical-project-tags span {
+  padding: 6px 9px;
+
+  border: 1px solid rgba(17, 20, 27, 0.09);
+  border-radius: 8px;
+
+  background: rgba(255, 255, 255, 0.58);
+
+  font-size: 0.9rem;
+  font-weight: 700;
+
+  line-height: 1.3;
+
+  color: #5c616c;
+}
+
+/* =========================================================
+   TYPICAL PROJECTS → CONTACT SEPARATOR
+   ========================================================= */
+
+.typical-projects {
+  padding-bottom: var(--section-split-gap);
+
+  border-bottom: 1px solid var(--line);
+}
+
+
+/* =========================================================
+   FINAL CONTACT CARD
+   ========================================================= */
+
+.contact {
+  margin-top: var(--section-split-gap);
+  padding-bottom: 0;
+}
+
+.service-footer {
+  margin-top: 24px;
+}
+/* =========================================================
+   ENTITY RESOLUTION — SPECIALIST AREA
+   ========================================================= */
+
+.er-specialist-pill {
+  display: inline-flex;
+  align-items: center;
+
+  width: fit-content;
+
+  margin-bottom: 18px;
+  padding: 6px 10px;
+
+  border: 1px solid rgba(95, 41, 199, 0.12);
+  border-radius: 999px;
+
+  background:
+    linear-gradient(135deg, rgba(14, 210, 218, 0.10), rgba(95, 41, 199, 0.10));
+
+  color: var(--violet);
+
+  font-family: "Manrope", sans-serif;
+  font-size: 0.66rem;
+  font-weight: 800;
+
+  letter-spacing: 0.11em;
+}
+
+
+/* =========================================================
+   WHY ENTITY RESOLUTION
+   ========================================================= */
+
+.er-logic {
+  margin-top: var(--section-gap);
+  padding-top: var(--section-split-gap);
+
+  border-top: 1px solid var(--line);
+}
+
+.er-logic-title {
+  max-width: 900px;
+
+  margin-bottom: 40px;
+
+  font-size: clamp(2.3rem, 4vw, 4.4rem);
+  line-height: 1.08;
+}
+
+
+/* =========================================================
+   SPECIALIST LOGIC CARD
+   ========================================================= */
+
+.er-logic-card {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 0.92fr)
+    minmax(0, 1.08fr);
+
+  overflow: hidden;
+
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+
+  background: #fafafa;
+}
+
+.er-logic-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding: clamp(32px, 5vw, 64px);
+}
+
+.er-logic-label {
+  width: fit-content;
+
+  margin-bottom: 26px;
+  padding: 6px 9px;
+
+  border: 1px solid rgba(95, 41, 199, 0.12);
+  border-radius: 8px;
+
+  background: rgba(95, 41, 199, 0.06);
+
+  color: var(--violet);
+
+  font-family: "Manrope", sans-serif;
+  font-size: 0.7rem;
+  font-weight: 800;
+
+  letter-spacing: 0.1em;
+}
+
+.er-logic-copy h3 {
+  max-width: 560px;
+
+  margin-bottom: 18px;
+
+  font-size: clamp(1.8rem, 3vw, 3rem);
+  line-height: 1.08;
+  letter-spacing: -0.04em;
+}
+
+.er-logic-copy p {
+  max-width: 590px;
+
+  margin-bottom: 0;
+
+  color: var(--muted);
+
+  font-size: clamp(1.1rem, 1.2vw, 1.4rem);
+  line-height: 1.6;
+}
+
+.er-logic-tags {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 7px;
+
+  margin-top: 24px;
+}
+
+.er-logic-tags span {
+  padding: 6px 9px;
+
+  border: 1px solid rgba(17, 20, 27, 0.09);
+  border-radius: 8px;
+
+  background: rgba(255, 255, 255, 0.8);
+
+  color: #5c616c;
+
+  font-size: 0.9rem;
+  font-weight: 700;
+
+  line-height: 1.3;
+}
+
+
+/* =========================================================
+   ENTITY GRAPH PANEL
+
+   Reuses the visual language of the Entity Resolution
+   case-study card on the landing page, but keeps the
+   implementation local to this service page.
+   ========================================================= */
+
+.er-graph-panel {
+  margin: 22px;
+
+  overflow: hidden;
+
+  border-radius: 20px;
+
+  background:
+    radial-gradient(
+      circle at 20% 20%,
+      rgba(14, 210, 218, 0.17),
+      transparent 36%
+    ),
+    radial-gradient(
+      circle at 82% 70%,
+      rgba(95, 41, 199, 0.17),
+      transparent 36%
+    ),
+    #151821;
+
+  color: #fff;
+}
+
+.er-visual-toolbar {
+  display: flex;
+  align-items: center;
+
+  gap: 6px;
+
+  padding: 14px 16px;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.er-visual-toolbar > span {
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+
+  background: #59606c;
+}
+
+.er-visual-toolbar small {
+  margin-left: 7px;
+
+  color: #8f95a1;
+}
+
+.er-network {
+  display: flex;
+
+  min-height: 390px;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 28px 24px 12px;
+}
+
+.er-network-canvas {
+  position: relative;
+
+  width: min(92%, 390px);
+
+  aspect-ratio: 1.08 / 1;
+
+  flex: 0 0 auto;
+}
+
+.er-node {
+  position: absolute;
+  z-index: 3;
+
+  display: grid;
+
+  width: 58px;
+  height: 58px;
+
+  place-items: center;
+
+  transform: translate(-50%, -50%);
+
+  border: 1px solid rgba(255, 255, 255, 0.26);
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.12);
+
+  box-shadow:
+    0 10px 35px rgba(0, 0, 0, 0.16);
+
+  backdrop-filter: blur(8px);
+
+  font-family: "Manrope", sans-serif;
+  font-weight: 800;
+}
+
+.er-node-a {
+  left: 17%;
+  top: 27%;
+}
+
+.er-node-b {
+  left: 83%;
+  top: 21%;
+}
+
+.er-node-c {
+  left: 29%;
+  top: 74%;
+}
+
+.er-node-d {
+  left: 76%;
+  top: 84%;
+}
+
+.er-network-edges {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+
+  width: 100%;
+  height: 100%;
+
+  overflow: visible;
+
+  pointer-events: none;
+}
+
+.er-edge-solid {
+  stroke: url(#er-relation-gradient);
+  stroke-width: 2;
+
+  vector-effect: non-scaling-stroke;
+}
+
+.er-edge-dotted {
+  stroke: rgba(226, 76, 96, 0.8);
+  stroke-width: 1.5;
+
+  stroke-dasharray: 2.5 4;
+  stroke-linecap: round;
+
+  vector-effect: non-scaling-stroke;
+}
+
+
+/* =========================================================
+   GRAPH LEGEND
+   ========================================================= */
+
+.er-graph-legend {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  gap: 10px 18px;
+
+  padding: 0 18px 16px;
+
+  color: #969ca8;
+
+  font-size: 0.68rem;
+  font-weight: 700;
+}
+
+.er-graph-legend span {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 7px;
+}
+
+.er-graph-legend i {
+  display: inline-block;
+
+  width: 25px;
+  height: 0;
+}
+
+.er-legend-solid {
+  border-top: 2px solid var(--cyan);
+}
+
+.er-legend-dotted {
+  border-top: 2px dotted rgba(226, 76, 96, 0.9);
+}
+
+
+/* =========================================================
+   GRAPH RESULT
+   ========================================================= */
+
+.er-visual-result {
+  display: grid;
+
+  grid-template-columns:
+    1fr
+    auto
+    1fr;
+
+  gap: 18px;
+
+  align-items: center;
+
+  margin: 0 20px 20px;
+  padding: 18px;
+
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 15px;
+
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.er-visual-result div {
+  text-align: center;
+}
+
+.er-visual-result small {
+  display: block;
+
+  color: #969ca8;
+
+  font-size: 0.62rem;
+  font-weight: 800;
+
+  letter-spacing: 0.08em;
+}
+
+.er-visual-result strong {
+  display: block;
+
+  margin-top: 5px;
+
+  font-size: 1.8rem;
+}
+
+
+/* =========================================================
+   ENTITY RESOLUTION — TABLET
+   ========================================================= */
+
+@media (max-width: 980px) {
+
+  .er-logic-card {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .er-logic-copy {
+    padding:
+      36px
+      36px
+      30px;
+  }
+
+  .er-logic-copy h3 {
+    max-width: 720px;
+  }
+
+  .er-logic-copy p {
+    max-width: 760px;
+  }
+
+  .er-graph-panel {
+    margin-top: 0;
+  }
+
+}
+
+
+/* =========================================================
+   ENTITY RESOLUTION — MOBILE
+   ========================================================= */
+
+@media (max-width: 680px) {
+
+  .er-specialist-pill {
+    margin-bottom: 14px;
+
+    font-size: 0.64rem;
+  }
+
+  .er-logic {
+    margin-top: var(--section-gap);
+    padding-top: var(--section-split-gap);
+  }
+
+  .er-logic-title {
+    max-width: none;
+
+    margin-bottom: 26px;
+
+    font-size: clamp(2.05rem, 9.5vw, 2.65rem);
+    line-height: 1.06;
+  }
+
+  .er-logic-card {
+    border-radius: 18px;
+  }
+
+  .er-logic-copy {
+    padding:
+      26px
+      24px
+      24px;
+  }
+
+  .er-logic-label {
+    margin-bottom: 18px;
+  }
+
+  .er-logic-copy h3 {
+    margin-bottom: 14px;
+
+    font-size: 1.55rem;
+    line-height: 1.12;
+  }
+
+  .er-logic-copy p {
+    max-width: none;
+
+    font-size: clamp(1.1rem, 1.2vw, 1.4rem);
+    line-height: 1.55;
+  }
+
+  .er-logic-tags {
+    margin-top: 20px;
+  }
+
+  .er-graph-panel {
+    margin:
+      0
+      12px
+      12px;
+
+    border-radius: 16px;
+  }
+
+  .er-network {
+    min-height: 310px;
+
+    padding:
+      22px
+      16px
+      8px;
+  }
+
+  .er-network-canvas {
+    width: min(94%, 320px);
+  }
+
+  .er-node {
+    width: 50px;
+    height: 50px;
+
+    font-size: 0.9rem;
+  }
+
+  .er-graph-legend {
+    padding:
+      0
+      14px
+      14px;
+
+    font-size: 0.64rem;
+  }
+
+  .er-visual-result {
+    gap: 12px;
+
+    margin:
+      0
+      14px
+      14px;
+
+    padding: 15px 12px;
+  }
+
+  .er-visual-result strong {
+    font-size: 1.55rem;
+  }
+
+}
+
+
+/* =========================================================
+   ENTITY RESOLUTION — SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 420px) {
+
+  .er-logic-copy {
+    padding:
+      23px
+      21px
+      22px;
+  }
+
+  .er-logic-copy h3 {
+    font-size: 1.45rem;
+  }
+
+  .er-graph-panel {
+    margin:
+      0
+      10px
+      10px;
+  }
+
+  .er-network {
+    min-height: 280px;
+  }
+
+  .er-node {
+    width: 46px;
+    height: 46px;
+  }
+
+  .er-visual-result small {
+    font-size: 0.56rem;
+  }
+
+}
