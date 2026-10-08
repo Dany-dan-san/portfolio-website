@@ -1,0 +1,47 @@
+# Ing. Dempsey Pasternak
+
+> Professional portfolio of Ing. Dempsey Pasternak, a data analyst and automation consultant based in Prague. The site presents services and technical work in data collection, web scraping, data cleaning, data quality, entity resolution, statistical analysis, machine learning and data automation.
+
+The website is available in English and Czech.
+
+Primary language: English.
+Czech-language content is located under /cs/.
+
+The site focuses on practical data projects, including collecting and structuring information, improving data quality, resolving duplicate or fragmented records, analysing data and automating recurring workflows.
+
+## Main Pages
+
+- [Homepage](https://dpasternak.com/): Overview of profile, capabilities, services and selected work.
+- [Services](https://dpasternak.com/services.html): Overview of available data and automation services.
+- [Selected Work](https://dpasternak.com/selected-work.html): Selected technical and analytical projects.
+- [About](https://dpasternak.com/about.html): Professional profile, background and technical expertise.
+- [Contact](https://dpasternak.com/contact.html): Contact page for discussing data projects.
+
+## Data Services
+
+- [Data Collection & Web Scraping](https://dpasternak.com/services/data-collection.html): Collection of structured information from websites, APIs, files and other digital sources.
+- [Data Cleaning & Data Quality](https://dpasternak.com/services/data-cleaning.html): Cleaning, validation, restructuring and consolidation of imperfect datasets.
+- [Entity Resolution & Record Matching](https://dpasternak.com/services/entity-resolution.html): Duplicate detection, record linkage, fuzzy matching and graph-based entity reconciliation.
+- [Data Analysis & Statistical Modelling](https://dpasternak.com/services/data-analysis.html): Exploratory analysis, statistical modelling, regression, clustering, segmentation and related analytical methods.
+- [Data & Reporting Automation](https://dpasternak.com/services/data-automation.html): Reusable workflows for recurring data preparation, processing, validation and reporting.
+
+## Czech Version
+
+- [Domů](https://dpasternak.com/cs/index.html): Česká úvodní stránka.
+- [Služby](https://dpasternak.com/cs/sluzby.html): Přehled datových služeb.
+- [Vybrané projekty](https://dpasternak.com/cs/projekty.html): Vybrané technické a analytické projekty.
+- [O mně](https://dpasternak.com/cs/o-mne.html): Profesní profil a technické zaměření.
+- [Kontakt](https://dpasternak.com/cs/kontakt.html): Kontaktní stránka.
+
+## Czech Data Services
+
+- [Sběr dat & web scraping](https://dpasternak.com/cs/sluzby/sber-dat.html)
+- [Čištění a kvalita dat](https://dpasternak.com/cs/sluzby/cisteni-dat.html)
+- [Entity Resolution & propojování záznamů](https://dpasternak.com/cs/sluzby/propojovani-zaznamu.html)
+- [Analýza dat & statistické modelování](https://dpasternak.com/cs/sluzby/analyza-dat.html)
+- [Automatizace dat & reportingu](https://dpasternak.com/cs/sluzby/automatizace-dat.html)
+
+## External Profiles
+
+- [LinkedIn](https://www.linkedin.com/in/dempseypasternak/)
+- [GitHub](https://github.com/Dany-dan-san)
